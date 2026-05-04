@@ -1919,22 +1919,234 @@ button { font-family: inherit; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
 /* === レスポンシブ === */
+
+/* タブレット */
 @media (max-width: 1024px) {
-  .bs-hero { grid-template-columns: 1fr; }
+  .bs-main { padding: 0 24px; }
+  .bs-header { padding: 14px 24px; }
+  .bs-nav { gap: 18px; }
+
+  .bs-hero {
+    grid-template-columns: 1fr;
+    padding: 60px 0 30px;
+    gap: 40px;
+    min-height: auto;
+    text-align: center;
+  }
+  .bs-hero-eyebrow { justify-content: center; }
+  .bs-hero-lead { margin-left: auto; margin-right: auto; }
+  .bs-hero-actions { justify-content: center; }
+  .bs-hero-title { font-size: 44px; }
+
   .bs-cat-grid { grid-template-columns: repeat(2, 1fr); }
   .bs-chat-container { grid-template-columns: 1fr; }
   .bs-chat-side { display: none; }
   .bs-how-steps { grid-template-columns: 1fr; }
   .bs-learn { grid-template-columns: 1fr; padding: 40px; }
   .bs-stats { flex-wrap: wrap; gap: 20px; }
+  .bs-stat { flex: 1 1 calc(50% - 10px); }
   .bs-stat-divider { display: none; }
-  .bs-hero-title { font-size: 40px; }
-  .bs-section-title { font-size: 30px; }
-  .bs-main { padding: 0 24px; }
-  .bs-header { padding: 14px 24px; }
-  .bs-nav { gap: 16px; }
-  .bs-result-head { grid-template-columns: 1fr; }
+  .bs-section-title { font-size: 32px; }
+  .bs-result-head { grid-template-columns: 1fr; text-align: center; gap: 18px; }
   .bs-result-cat-mini { margin: 0 auto; }
-  .bs-footer-inner { grid-template-columns: 1fr; padding: 40px 24px; }
+  .bs-answer-summary { justify-content: center; }
+  .bs-footer-inner { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
+}
+
+/* スマートフォン */
+@media (max-width: 768px) {
+  /* ヘッダー: 簡略化 */
+  .bs-header { padding: 12px 16px; }
+  .bs-brand-name { font-size: 16px; letter-spacing: 0.02em; }
+  .bs-brand-sub { display: none; }
+  .bs-logo-mark svg { width: 28px; height: 28px; }
+  .bs-nav { gap: 8px; }
+  .bs-nav-link { display: none; }
+  .bs-account-btn { padding: 7px 12px; font-size: 11px; }
+
+  .bs-main { padding: 0 16px; }
+
+  /* HERO */
+  .bs-hero { padding: 32px 0 16px; gap: 24px; }
+  .bs-hero-eyebrow { font-size: 10px; margin-bottom: 18px; letter-spacing: 0.2em; }
+  .bs-hero-title { font-size: 30px; line-height: 1.4; margin-bottom: 18px; }
+  .bs-hero-lead { font-size: 13px; line-height: 1.9; margin-bottom: 24px; }
+  .bs-hero-lead br { display: none; }
+  .bs-hero-actions { flex-direction: column; gap: 10px; align-items: stretch; }
+  .bs-btn-primary, .bs-btn-secondary {
+    width: 100%;
+    padding: 14px 20px;
+    justify-content: center;
+    font-size: 13px;
+    text-align: center;
+  }
+  .bs-btn-primary { display: flex; }
+
+  /* キャラクター */
+  .bs-cat-stage { width: 280px; height: 280px; }
+  .bs-cat-stage svg { width: 240px !important; height: 240px !important; }
+  .bs-cat-bg { width: 240px; height: 240px; }
+  .bs-speech {
+    top: 8px;
+    left: -8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    white-space: normal;
+    max-width: 160px;
+  }
+  .bs-cat-name-jp { font-size: 16px; }
+  .bs-cat-name-en { font-size: 9px; }
+
+  /* スタッツ */
+  .bs-stats {
+    padding: 28px 0;
+    margin-bottom: 60px;
+    gap: 16px;
+  }
+  .bs-stat-num { font-size: 32px; }
+  .bs-stat-unit { font-size: 16px; }
+  .bs-stat-label { font-size: 9px; margin-top: 8px; letter-spacing: 0.1em; }
+
+  /* セクション */
+  .bs-section-head { margin-bottom: 32px; }
+  .bs-section-num { font-size: 11px; letter-spacing: 0.2em; margin-bottom: 12px; }
+  .bs-section-line { width: 40px; }
+  .bs-section-title { font-size: 24px; line-height: 1.4; }
+  .bs-section-sub { font-size: 12px; }
+  .bs-categories, .bs-how { padding: 50px 0; }
+
+  /* カテゴリーグリッド */
+  .bs-cat-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .bs-cat-card-inner { padding: 18px 14px; min-height: 160px; }
+  .bs-cat-card-num { margin-bottom: 12px; font-size: 10px; }
+  .bs-cat-card-icon { font-size: 24px; margin-bottom: 10px; }
+  .bs-cat-card-en { font-size: 9px; letter-spacing: 0.15em; }
+  .bs-cat-card-name { font-size: 15px; margin-bottom: 14px; }
+  .bs-cat-card-arrow { font-size: 11px; gap: 6px; }
+  .bs-arrow-line { width: 16px; }
+
+  /* ステップ */
+  .bs-how-steps { gap: 14px; }
+  .bs-step { padding: 24px 20px; }
+  .bs-step-icon { font-size: 40px; margin-bottom: 12px; }
+  .bs-step-title { font-size: 18px; }
+  .bs-step-text { font-size: 12px; line-height: 1.8; }
+
+  /* 学習セクション */
+  .bs-learn { padding: 32px 24px; gap: 24px; margin-bottom: 60px; }
+  .bs-learn-cat { width: 180px; height: 180px; margin: 0 auto; }
+  .bs-learn-cat svg { width: 150px !important; height: 150px !important; }
+  .bs-learn-lead { font-size: 13px; line-height: 1.9; }
+  .bs-learn-lead br { display: none; }
+  .bs-learn-point { font-size: 13px; gap: 10px; }
+  .bs-learn-point-icon { width: 22px; height: 22px; font-size: 11px; }
+
+  /* ページヘッド */
+  .bs-page-head { padding-top: 20px; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+  .bs-back-btn { padding: 7px 14px; font-size: 11px; }
+  .bs-breadcrumb { font-size: 11px; gap: 6px; }
+
+  /* チャット */
+  .bs-chat-head { margin-bottom: 24px; padding-bottom: 16px; }
+  .bs-chat-head .bs-section-title { font-size: 24px !important; }
+  .bs-chat-area { padding: 18px; min-height: 280px; max-height: 380px; margin-bottom: 14px; }
+  .bs-msg-row { gap: 8px; margin-bottom: 14px; }
+  .bs-msg-bubble { font-size: 13px; padding: 12px 14px; max-width: 80%; line-height: 1.7; }
+  .bs-msg-avatar { width: 32px; height: 32px; }
+  .bs-msg-avatar svg { transform: scale(1.4) translateY(2px); }
+  .bs-opt-wrap { grid-template-columns: 1fr; gap: 8px; }
+  .bs-opt-btn { padding: 14px 16px; font-size: 13px; gap: 12px; }
+
+  /* 結果ページ */
+  .bs-result-head { padding: 22px 18px; gap: 16px; margin-bottom: 28px; }
+  .bs-result-cat-mini { width: 90px; height: 90px; }
+  .bs-result-cat-mini svg { width: 76px !important; height: 76px !important; }
+  .bs-result-title { font-size: 22px; margin: 6px 0 12px; }
+  .bs-answer-summary { gap: 6px; }
+  .bs-answer-chip { font-size: 10px; padding: 4px 10px; }
+
+  .bs-result-list { gap: 12px; margin-bottom: 40px; }
+  .bs-result-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 14px;
+  }
+  .bs-result-rank {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E8E5DD;
+    text-align: left;
+  }
+  .bs-result-rank-num { font-size: 36px; }
+  .bs-result-rank-label { margin-top: 0; font-size: 9px; }
+
+  .bs-result-tag-row { flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .bs-result-tag { font-size: 9px; padding: 4px 10px; }
+  .bs-result-match-num { font-size: 22px; }
+  .bs-result-name { font-size: 17px; line-height: 1.5; margin-bottom: 6px; }
+  .bs-result-price { font-size: 13px; margin-bottom: 12px; }
+  .bs-result-bar { margin-bottom: 14px; }
+  .bs-result-reason { padding: 10px 12px; margin-bottom: 14px; }
+  .bs-reason-text { font-size: 12px; line-height: 1.7; }
+  .bs-reason-label { font-size: 9px; margin-bottom: 4px; }
+
+  .bs-feedback-row { flex-wrap: wrap; gap: 8px; }
+  .bs-fb-btn { padding: 8px 14px; font-size: 11px; flex: 1 1 calc(50% - 4px); text-align: center; }
+  .bs-detail-btn {
+    margin-left: 0;
+    width: 100%;
+    padding: 11px 16px;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .bs-learn-hint { padding: 18px 20px; flex-direction: column; text-align: center; gap: 10px; margin-bottom: 50px; }
+  .bs-learn-hint-icon { font-size: 24px; }
+  .bs-learn-hint-text { font-size: 11px; }
+
+  /* メモパネル */
+  .bs-memo-toggle {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+  .bs-memo-panel {
+    width: 100%;
+    padding: 24px 20px;
+  }
+  .bs-memo-eyebrow { font-size: 10px; }
+  .bs-memo-title { font-size: 18px; }
+  .bs-memo-desc { font-size: 11px; margin-bottom: 20px; }
+  .bs-memo-section { margin-bottom: 22px; }
+  .bs-memo-item { font-size: 12px; padding: 6px 0; }
+
+  /* フッター */
+  .bs-footer-inner { padding: 32px 16px; gap: 24px; }
+  .bs-footer-cols { gap: 32px; flex-wrap: wrap; }
+  .bs-footer-base { padding: 16px 20px; font-size: 10px; }
+}
+
+/* 小型スマートフォン (iPhone SE等) */
+@media (max-width: 480px) {
+  .bs-hero-title { font-size: 26px; }
+  .bs-section-title { font-size: 22px; }
+  .bs-cat-stage { width: 240px; height: 240px; }
+  .bs-cat-stage svg { width: 200px !important; height: 200px !important; }
+  .bs-cat-bg { width: 200px; height: 200px; }
+  .bs-stat-num { font-size: 28px; }
+  .bs-stat-unit { font-size: 14px; }
+  .bs-cat-grid { grid-template-columns: 1fr; }
+  .bs-cat-card-inner { min-height: auto; padding: 18px 16px; }
+  .bs-result-title { font-size: 20px; }
+  .bs-result-name { font-size: 16px; }
+  .bs-breadcrumb { font-size: 10px; gap: 4px; }
+  .bs-page-head { gap: 8px; }
+  .bs-account-btn span:not(.bs-account-icon) { display: none; }
+  .bs-account-btn { padding: 7px 10px; }
+  .bs-msg-bubble { max-width: 85%; }
 }
 `;
