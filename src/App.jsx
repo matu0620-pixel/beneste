@@ -1216,7 +1216,8 @@ function SyncPanel({ open, onClose, insights }) {
 
 // ============ スタイル ============
 const globalCSS = `
-/* Meiryo UI ベースのフォントスタック */
+/* Meiryo UI ベースのフォントスタック + かわいい丸ゴシック */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1492,14 +1493,16 @@ button { font-family: inherit; }
   animation: speechIn 0.6s cubic-bezier(.34,1.56,.64,1) both 0.3s, speechFloat 4s ease-in-out infinite 1s;
 }
 .bs-greeting-text {
-  font-family: 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
+  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
   color: #003F8E;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   letter-spacing: 0.02em;
 }
 .bs-greeting-sub {
+  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-weight: 500;
   font-size: 11px;
   color: #64748B;
   letter-spacing: 0.05em;
@@ -1515,53 +1518,61 @@ button { font-family: inherit; }
   max-width: 520px;
 }
 .bs-now-you-label {
+  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.2em;
   color: #003F8E;
   margin-bottom: 6px;
 }
 .bs-now-you-text {
+  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
   font-size: 13px;
+  font-weight: 500;
   color: #1E293B;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* === キャラ別ふきだし === */
 .bs-mascot-bubble {
-  position: absolute;
-  top: -8px;
+  position: relative;
   background: #fff;
-  border: 1px solid #E2E8F0;
-  padding: 8px 12px;
-  border-radius: 14px;
+  border: 2px solid #003F8E;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   color: #003F8E;
-  line-height: 1.5;
-  max-width: 180px;
+  line-height: 1.6;
+  max-width: 200px;
+  margin-bottom: 14px;
   z-index: 6;
-  box-shadow: 0 4px 12px rgba(0, 63, 142, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 63, 142, 0.12);
   animation: speechIn 0.5s cubic-bezier(.34,1.56,.64,1) both, bubbleBob 4s ease-in-out infinite;
   white-space: normal;
   text-align: center;
+  align-self: center;
 }
 .bs-mascot-bubble::after {
   content: "";
   position: absolute;
-  bottom: -6px;
+  bottom: -7px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: #fff;
-  border-right: 1px solid #E2E8F0;
-  border-bottom: 1px solid #E2E8F0;
+  border-right: 2px solid #003F8E;
+  border-bottom: 2px solid #003F8E;
 }
-.bs-bubble-taro { color: #003F8E; }
-.bs-bubble-kichi { color: #1A5CB0; animation-delay: 0.2s; }
-.bs-bubble-maru { color: #C73E2E; animation-delay: 0.4s; }
-@keyframes bubbleBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.bs-bubble-taro { color: #003F8E; border-color: #003F8E; }
+.bs-bubble-taro::after { border-right-color: #003F8E; border-bottom-color: #003F8E; }
+.bs-bubble-kichi { color: #1A5CB0; border-color: #1A5CB0; animation-delay: 0.2s; }
+.bs-bubble-kichi::after { border-right-color: #1A5CB0; border-bottom-color: #1A5CB0; }
+.bs-bubble-maru { color: #C73E2E; border-color: #C73E2E; animation-delay: 0.4s; }
+.bs-bubble-maru::after { border-right-color: #C73E2E; border-bottom-color: #C73E2E; }
+@keyframes bubbleBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 
 .bs-mascot-pair {
   display: flex;
@@ -1659,15 +1670,17 @@ button { font-family: inherit; }
   box-shadow: 0 2px 6px rgba(0, 63, 142, 0.06);
 }
 .bs-mascot-name-jp {
-  font-family: 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   color: #003F8E;
   letter-spacing: 0.05em;
   line-height: 1.2;
 }
 .bs-mascot-name-role {
+  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
   font-size: 10px;
+  font-weight: 500;
   color: #64748B;
   letter-spacing: 0.1em;
   margin-top: 2px;
