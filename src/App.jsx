@@ -1493,19 +1493,21 @@ button { font-family: inherit; }
   animation: speechIn 0.6s cubic-bezier(.34,1.56,.64,1) both 0.3s, speechFloat 4s ease-in-out infinite 1s;
 }
 .bs-greeting-text {
-  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 17px;
   color: #003F8E;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 .bs-greeting-sub {
-  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 12px;
   color: #64748B;
   letter-spacing: 0.05em;
+  line-height: 1.6;
 }
 
 /* === 今のあなたカード === */
@@ -1518,19 +1520,22 @@ button { font-family: inherit; }
   max-width: 520px;
 }
 .bs-now-you-label {
-  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-  font-size: 10px;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.2em;
   color: #003F8E;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .bs-now-you-text {
-  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-  font-size: 13px;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-size: 13.5px;
   font-weight: 500;
   color: #1E293B;
-  line-height: 1.8;
+  line-height: 1.95;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
 }
 
 /* === キャラ別ふきだし === */
@@ -1538,21 +1543,23 @@ button { font-family: inherit; }
   position: relative;
   background: #fff;
   border: 2px solid #003F8E;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-radius: 18px;
-  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
   color: #003F8E;
-  line-height: 1.6;
-  max-width: 200px;
+  line-height: 1.85;
+  max-width: 240px;
   margin-bottom: 14px;
   z-index: 6;
   box-shadow: 0 6px 16px rgba(0, 63, 142, 0.12);
   animation: speechIn 0.5s cubic-bezier(.34,1.56,.64,1) both, bubbleBob 4s ease-in-out infinite;
-  white-space: normal;
-  text-align: center;
+  text-align: left;
   align-self: center;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
 }
 .bs-mascot-bubble::after {
   content: "";
@@ -1670,7 +1677,7 @@ button { font-family: inherit; }
   box-shadow: 0 2px 6px rgba(0, 63, 142, 0.06);
 }
 .bs-mascot-name-jp {
-  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-size: 14px;
   font-weight: 800;
   color: #003F8E;
@@ -1678,7 +1685,7 @@ button { font-family: inherit; }
   line-height: 1.2;
 }
 .bs-mascot-name-role {
-  font-family: 'M PLUS Rounded 1c', 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-size: 10px;
   font-weight: 500;
   color: #64748B;
@@ -3181,12 +3188,22 @@ button { font-family: inherit; }
   .bs-cat-stage svg { width: 115px !important; height: 115px !important; }
   .bs-cat-bg { width: 100px; height: 100px; }
   .bs-mascots-greeting { padding: 11px 18px; }
-  .bs-greeting-text { font-size: 13px; }
-  .bs-greeting-sub { font-size: 10px; }
+  .bs-greeting-text { font-size: 14px; }
+  .bs-greeting-sub { font-size: 11px; }
   .bs-mascot-name { padding: 4px 10px; min-width: 70px; }
   .bs-mascot-name-jp { font-size: 11px; }
   .bs-mascot-name-role { font-size: 8px; }
   .bs-particle { font-size: 12px !important; }
+  .bs-mascot-bubble {
+    max-width: 170px;
+    font-size: 11.5px;
+    padding: 10px 13px;
+    line-height: 1.75;
+    border-width: 1.5px;
+  }
+  .bs-mascot-bubble::after { width: 9px; height: 9px; bottom: -5px; border-width: 1.5px; }
+  .bs-now-you-text { font-size: 13px; line-height: 1.85; }
+  .bs-now-you-label { font-size: 10px; }
   .bs-speech {
     top: 8px;
     left: -8px;
@@ -3340,12 +3357,23 @@ button { font-family: inherit; }
   .bs-cat-bg { width: 85px; height: 85px; }
   .bs-mascot-pair { gap: 0; }
   .bs-mascots-greeting { padding: 9px 14px; border-radius: 14px 14px 14px 4px; }
-  .bs-greeting-text { font-size: 12px; }
-  .bs-greeting-sub { font-size: 9px; }
+  .bs-greeting-text { font-size: 13px; }
+  .bs-greeting-sub { font-size: 10px; }
   .bs-mascot-name { padding: 3px 8px; min-width: 60px; }
   .bs-mascot-name-jp { font-size: 10px; }
   .bs-mascot-name-role { font-size: 8px; }
   .bs-particle { font-size: 10px !important; }
+  .bs-mascot-bubble {
+    max-width: 130px;
+    font-size: 10.5px;
+    padding: 8px 10px;
+    line-height: 1.7;
+    border-width: 1.5px;
+    margin-bottom: 10px;
+  }
+  .bs-mascot-bubble::after { width: 8px; height: 8px; bottom: -5px; border-width: 1.5px; }
+  .bs-now-you-text { font-size: 12px; line-height: 1.8; }
+  .bs-now-you-label { font-size: 9px; }
   .bs-stat-num { font-size: 28px; }
   .bs-stat-unit { font-size: 14px; }
   .bs-cat-grid { grid-template-columns: 1fr; }
