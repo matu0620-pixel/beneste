@@ -1216,8 +1216,8 @@ function SyncPanel({ open, onClose, insights }) {
 
 // ============ スタイル ============
 const globalCSS = `
-/* Meiryo UI ベースのフォントスタック + かわいい丸ゴシック */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap');
+/* Meiryo UI ベースのフォントスタック + かわいい手書き風フォント */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Yusei+Magic&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1404,21 +1404,31 @@ button { font-family: inherit; }
   background: #1A5CB0;
 }
 .bs-hero-title {
-  font-family: 'Meiryo UI', Meiryo, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-  font-size: 60px;
-  line-height: 1.3;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-size: 56px;
+  line-height: 1.35;
   font-weight: 700;
   color: #003F8E;
   margin-bottom: 32px;
   letter-spacing: 0.02em;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
 }
-.bs-hero-title span { display: block; }
+.bs-hero-title span {
+  display: block;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
 .bs-hero-lead {
   font-size: 15px;
   line-height: 2;
   color: #4a5568;
   margin-bottom: 40px;
   max-width: 480px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
 }
 .bs-hero-actions { display: flex; gap: 14px; }
 
@@ -1493,7 +1503,7 @@ button { font-family: inherit; }
   animation: speechIn 0.6s cubic-bezier(.34,1.56,.64,1) both 0.3s, speechFloat 4s ease-in-out infinite 1s;
 }
 .bs-greeting-text {
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-weight: 800;
   font-size: 17px;
   color: #003F8E;
@@ -1502,7 +1512,7 @@ button { font-family: inherit; }
   line-height: 1.5;
 }
 .bs-greeting-sub {
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-weight: 500;
   font-size: 12px;
   color: #64748B;
@@ -1520,7 +1530,7 @@ button { font-family: inherit; }
   max-width: 520px;
 }
 .bs-now-you-label {
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -1528,7 +1538,7 @@ button { font-family: inherit; }
   margin-bottom: 8px;
 }
 .bs-now-you-text {
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-size: 13.5px;
   font-weight: 500;
   color: #1E293B;
@@ -1545,7 +1555,7 @@ button { font-family: inherit; }
   border: 2px solid #003F8E;
   padding: 12px 16px;
   border-radius: 18px;
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-size: 12.5px;
   font-weight: 500;
   color: #003F8E;
@@ -1677,7 +1687,7 @@ button { font-family: inherit; }
   box-shadow: 0 2px 6px rgba(0, 63, 142, 0.06);
 }
 .bs-mascot-name-jp {
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-size: 14px;
   font-weight: 800;
   color: #003F8E;
@@ -1685,7 +1695,7 @@ button { font-family: inherit; }
   line-height: 1.2;
 }
 .bs-mascot-name-role {
-  font-family: 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
+  font-family: 'Yusei Magic', 'M PLUS Rounded 1c', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', Meiryo, sans-serif;
   font-size: 10px;
   font-weight: 500;
   color: #64748B;
@@ -3120,6 +3130,11 @@ button { font-family: inherit; }
 
 /* === レスポンシブ === */
 
+/* 中型デスクトップ */
+@media (max-width: 1280px) {
+  .bs-hero-title { font-size: 46px; line-height: 1.4; }
+}
+
 /* タブレット */
 @media (max-width: 1024px) {
   .bs-main { padding: 0 24px; }
@@ -3136,7 +3151,7 @@ button { font-family: inherit; }
   .bs-hero-eyebrow { justify-content: center; }
   .bs-hero-lead { margin-left: auto; margin-right: auto; }
   .bs-hero-actions { justify-content: center; }
-  .bs-hero-title { font-size: 44px; }
+  .bs-hero-title { font-size: 38px; line-height: 1.4; }
 
   .bs-cat-grid { grid-template-columns: repeat(2, 1fr); }
   .bs-chat-container { grid-template-columns: 1fr; }
